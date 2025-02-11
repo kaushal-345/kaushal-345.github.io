@@ -10,7 +10,7 @@
 }
 
 .header-row {
-  background-color: orange;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,17 +19,21 @@
 }
 
 .header-row .box {
-  padding: 10px;
+  /* padding: 30px; */
+  margin-left: 30px;
+  margin-right: 30px;
+  color: aliceblue;
 }
 
 .header-row li {
   display: inline;
-  padding: 5px;
-  font-size: larger;
+  padding: 10px;
+  font-size: large;
 }
 
 .header-row a {
   text-decoration: none;
+  color: aliceblue;
 }
 
 .header-row a:hover {
@@ -39,6 +43,7 @@
 .row {
   padding: 100px;
   height: 75%;
+  /* margin-top: 100px; */
 }
 
 .row .box {
@@ -60,4 +65,17 @@ button {
   color: white;
   border: none;
   border-radius: 10%;
+}
+.row1 .box img{
+  border-radius: 400px;
+}
+.row1 .box1{
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: center; */
+  margin-top: 60px;
+}
+.row1 {
+  padding: 100px;
+  height: 50%;
 }
