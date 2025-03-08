@@ -1,193 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/ball.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <div class="header-row"> 
-        <div class="box"><h1>Kaushal Kulkarni</h1></div>
-        <div class="box">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="header-row">
+            <div class="box"><h1>Kaushal Kulkarni</h1></div>
+            <div class="box">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#socials">Socials</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
 
-      <div class="row1" id="home" style="background-color: brown;">
-        <div style="display: flex;">
-          <div class="box1">
-            <h1><i>Hello there</i></h1>
-            <p style="font-size: x-large;">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              neque est nihil ipsum error. Deserunt voluptas explicabo ea eum
-              quasi. Rem nisi molestias quia nesciunt incidunt numquam fugiat
-              perferendis assumenda?
-            </p>
-            <!-- <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              neque est nihil ipsum error. Deserunt voluptas explicabo ea eum
-              quasi. Rem nisi molestias quia nesciunt incidunt numquam fugiat
-              perferendis assumenda?
-            </p>
-            <button>Button 1</button>
-            <button>Button 1</button> -->
-          </div>
-          <div class="box">
-            <img src="https://picsum.photos/id/2/400/400" />
-          </div>
+        <div class="row1" id="home">
+            <div class="box1">
+                <p style="font-family:Courier New, Courier, monospace; font-size: xx-large;"><i>Hello there!</i></p>
+                <p style="font-family:Courier New, Courier, monospace; font-size:x-large;"><b>
+                    Kaushal here!; A passionate 3rd year Computer Science student at <a href="https://www.google.com/search?q=GRIET" target="_blank">GRIET</a> with a focus on software development, web technologies, and machine learning.<br><br>
+                    Beyond technical skills, I thrive in collaborative environments, having worked on team-based projects, hackathons, and club activities where problem-solving and adaptability were key. I enjoy brainstorming solutions and ensuring seamless execution in a team setting.
+                </b></p>
+            </div>
+            <div class="box">
+                <img src="assets/images/p1.png"></img>
+            </div>
         </div>
-      </div>
 
-      <div id="projects" class="row" style="background-color: lightcoral">
-        <h1>Projects</h1>
-        <div style="display: flex">
-          <div class="box">
-            <h3><a href="https://kaushal-345.github.io/online-store/" target="_blank" rel="noopener noreferrer">Project 1</a></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
+        <div class="row2" id="projects">
+            <h1>Projects</h1>
+            <div class="can">
+                <div class="box">
+                    <h2>Online Store</h2>
+                    <p>A sample online store website built using HTML & CSS. It features a simple layout with product descriptions, images, and buttons. This project was my first attempt at frontend design, helping me explore basic styling and layout techniques.<br><br><br></p>
+                        <button onclick="window.open('https://kaushal-345.github.io/online-store/', '_blank');">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/online-store/blob/main/index.html', '_blank');">Github code</button>
+                </div>
+                <div class="box">
+                    <h2>My Bank</h2>
+                    <p>A simple web-based banking interface built with HTML, CSS, JavaScript, and Bootstrap for styling. It features user registration, login, and basic banking operations like deposits, withdrawals, and transfers between users. The project focuses on frontend logic with dynamic UI updates using JavaScript but does not include backend integration or real financial transactions.</p>
+                        <button onclick="window.open('https://kaushal-345.github.io/my-bank/', '_blank');">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/my-bank/blob/main/index.js', '_blank');">Github code</button>
+                </div>
+                <div class="box">
+                    <h2>My Store</h2>
+                    <p>Unlike basic online store with only static product listings, My Store features a fully functional "Add to Cart" system using JavaScript. Users can add, remove, and update items in their cart, view the total order value, and place orders. The project also includes user authentication, order tracking, and dynamic UI updates, making it a step beyond simple frontend design.</p>
+                        <button onclick="window.open('https://kaushal-345.github.io/my-store/', '_blank');">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/my-store/blob/main/index.js', '_blank');">Github code</button>
+                </div>
+                <div class="box">
+                    <h2>Social Media</h2>
+                    <p>My Social Media is an interactive dashboard that utilizes the JSONPlaceholder API to fetch and display user data. Initially, users select from 10 available users and sign in. Once logged in, they can navigate between different sections—Posts, Albums, Profile, and To-Do List—all dynamically retrieved from the API.</p>
+                        <button onclick="window.open('https://kaushal-345.github.io/socialmedia/', '_blank');">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/socialmedia/blob/main/script.js', '_blank');">Github code</button>
+                </div>
+                <div class="box">
+                    <h2>Upcoming</h2>
+                    <p>Upcoming React.js project<br><br><br><br><br></p>
+                        <button onclick="location.href='#home'">View Project</button>
+                        <button onclick="location.href='#home'">Github code</button>
+                </div>
+                <div class="box">
+                    <h2>Upcoming</h2>
+                    <p>Upcoming ML project<br><br><br><br><br></p>
+                        <button onclick="location.href='#home'">View Project</button>
+                        <button onclick="location.href='#home'">Github code</button>
+                </div>
+            </div>
+        </div> 
 
-          <div class="box">
-            <h3><a href=" https://kaushal-345.github.io/my-bank/" target="_blank" rel="noopener noreferrer">Project 2</a></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
-
-          <div class="box">
-            <h3><a href=" https://kaushal-345.github.io/my-store/" target="_blank" rel="noopener noreferrer">Project 3</a></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
-
-          <div class="box">
-            <h3><a href=" https://kaushal-345.github.io/website/" target="_blank" rel="noopener noreferrer">Project 4</a></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
-
-          <div class="box">
-            <h3><a href=" https://kaushal-345.github.io/socialmedia/" target="_blank" rel="noopener noreferrer">Project 5</a></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
+        <div class="row3" id="resume">
+            <h1><i>Wanna know more about me!?</i></h1><br><br>
+            <div class="custom-hr"></div>
+            <h2>Click here to view my Resume</h2>
+        <button onclick="window.open('https://drive.google.com/file/d/1ipNFtPGACBQH_WVOuaFzDnXaFajfnoTD/view?usp=sharing', '_blank');"><p style="font-family:Courier New, Courier, monospace; font-size: x-large;">My Resume</p></button>
         </div>
-      </div>
-      <div id="services" class="row" style="background-color: lightblue">
-        <h1>Services</h1>
-        <div style="display: flex">
-          <div class="box">
-            <h3>Web App Development</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
 
-          <div class="box">
-            <h3>Mobile App Development</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
-
-          <div class="box">
-            <h3>Backend Development</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-          </div>
+        <div class="footer" id="socials">
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/kaushal-345-/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF" alt="LinkedIn"> LinkedIn
+                </a>
+                <a href="https://github.com/kaushal-345" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" alt="GitHub"> GitHub
+                </a>
+                <a href="mailto:kaushal.kulkarni345@gmail.com">
+                    <img src="https://img.icons8.com/?size=100&id=38159&format=png&color=FFFFFF" alt="Mail"> Email
+                </a>
+                <!-- <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=FFFFFF" alt="Instagram"> Instagram
+                </a> -->
+            </div>
         </div>
-      </div>
-      <div id="about" class="row">
-        <h1>About</h1>
-        <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint
-          optio labore a obcaecati. Ullam distinctio corrupti autem. Veritatis
-          ipsa veniam deserunt asperiores nesciunt at provident itaque
-          cupiditate vel dolor.
-        </h3>
-        <h2>Skills</h2>
-        <h3>Java, Python, Reactjs</h3>
-        <p>Display the logo of all the technologies you know.</p>
-      </div>
-      <div
-        id="contact"
-        class="row"
-        style="background-color: lightgoldenrodyellow"
-      >
-        <h1>Contact</h1>
-        <div style="display: flex">
-         
-
-          <div class="box">
-            <h3>Contact Form</h3>
-            <p>
-             <input type="text" placeholder="Enter Name">
-            </p>
-            <p>
-              <input type="email" placeholder="Enter Email">
-             </p>
-             <p>
-              <textarea rows="10" cols="60" placeholder="Enter message"></textarea>
-             </p>
-             <button>Send</button>
-          </div>
-
-          <div class="box">
-            <h3>Your/Company Name</h3>
-            <p>
-              <b>Address: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
-            </p>
-            <p>
-              <b>Email Address: </b>sample@email.com
-            </p>
-            <p>
-              <b>Phone Number: </b>+91 343 445 6789
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer">@copyright 2024. All rights reserved.</div>
     </div>
-  </body>
+</body>
 </html>
