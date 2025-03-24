@@ -22,7 +22,6 @@
   padding: 10px;
   font-size: large;
   cursor: pointer;
-  transition: background-color;
 }
 .header-row li a{
   text-decoration: none;
