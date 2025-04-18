@@ -4,109 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        silver: '#c0c0c0',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header-row">
-            <div class="box"><h1>Kaushal Kulkarni</h1></div>
-            <div class="box">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#socials">Socials</a></li>
+    <div class="fixed inset-0 overflow-auto h-full scroll-smooth">
+        <!-- Header Navigation -->
+        <div class="bg-black flex flex-col md:flex-row justify-between items-center sticky top-0 z-10 px-4 py-3">
+            <div class="text-gray-100 my-2 md:my-0 md:mx-8"><h1 class="text-xl md:text-2xl font-bold">Kaushal Kulkarni</h1></div>
+            <div class="text-gray-100 md:mx-8">
+                <ul class="flex flex-wrap justify-center gap-2">
+                    <li class="px-2.5 text-base md:text-lg cursor-pointer transition-colors hover:bg-gray-800 hover:rounded-lg">
+                        <a href="#home" class="no-underline text-gray-100">Home</a>
+                    </li>
+                    <li class="px-2.5 text-base md:text-lg cursor-pointer transition-colors hover:bg-gray-800 hover:rounded-lg">
+                        <a href="#projects" class="no-underline text-gray-100">Projects</a>
+                    </li>
+                    <li class="px-2.5 text-base md:text-lg cursor-pointer transition-colors hover:bg-gray-800 hover:rounded-lg">
+                        <a href="#resume" class="no-underline text-gray-100">Resume</a>
+                    </li>
+                    <li class="px-2.5 text-base md:text-lg cursor-pointer transition-colors hover:bg-gray-800 hover:rounded-lg">
+                        <a href="#socials" class="no-underline text-gray-100">Socials</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="row1" id="home">
-            <div class="box1">
-                <p style="font-family:Courier New, Courier, monospace; font-size: xx-large;"><i>Hello there!</i></p>
-                <p style="font-family:Courier New, Courier, monospace; font-size:x-large;"><b>
-                    Kaushal here!; A passionate 3rd year Computer Science student at <a href="https://www.google.com/search?q=GRIET" target="_blank">GRIET</a> with a focus on software development, web technologies, and machine learning.<br><br>
+        <!-- Hero Section -->
+        <div class="flex flex-col md:flex-row justify-between p-6 md:p-12 lg:p-24 min-h-screen md:min-h-[50vh] bg-silver" id="home">
+            <div class="w-full md:w-3/5 pr-0 md:pr-8 lg:pr-16 mb-8 md:mb-0">
+                <p class="font-mono text-2xl md:text-3xl italic">Hello there!</p>
+                <p class="font-mono text-lg md:text-xl lg:text-2xl font-bold mt-4">
+                    Kaushal here!; A passionate 3rd year Computer Science student at <a href="https://www.google.com/search?q=GRIET" target="_blank" class="underline text-black">GRIET</a> with a focus on software development, web technologies, and machine learning.<br><br>
                     Beyond technical skills, I thrive in collaborative environments, having worked on team-based projects, hackathons, and club activities where problem-solving and adaptability were key. I enjoy brainstorming solutions and ensuring seamless execution in a team setting.
-                </b></p>
+                </p>
             </div>
-            <div class="box">
-                <img src="assets/images/p1.png"></img>
+            <div class="flex justify-center md:justify-end w-full md:w-2/5">
+                <img src="assets/images/p1.png" class="rounded-full w-64 md:w-80 lg:w-96 bg-black" alt="Profile picture">
             </div>
         </div>
 
-        <div class="row2" id="projects">
-            <h1>Projects</h1>
-            <div class="can">
-                <!-- <div class="box">
-                    <h2>Online Store</h2>
-                    <p>A sample online store website built using HTML & CSS. It features a simple layout with product descriptions, images, and buttons. This project was my first attempt at frontend design, helping me explore basic styling and layout techniques.<br><br><br></p>
-                        <button onclick="window.open('https://kaushal-345.github.io/online-store/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/online-store/blob/main/index.html', '_blank');">Github code</button>
-                </div> -->
-                <div class="box">
-                    <h2>My Bank</h2>
-                    <p>A simple web-based banking interface built with HTML, CSS, JavaScript, and Bootstrap for styling. It features user registration, login, and basic banking operations like deposits, withdrawals, and transfers between users. The project focuses on frontend logic with dynamic UI updates using JavaScript but does not include backend integration or real financial transactions.</p>
-                        <button onclick="window.open('https://kaushal-345.github.io/my-bank/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/my-bank/blob/main/index.js', '_blank');">Github code</button>
+        <!-- Projects Section -->
+        <div class="p-4 md:p-8 bg-black" id="projects">
+            <h1 class="text-gray-100 text-2xl md:text-3xl text-center mb-8">Projects</h1>
+            <div class="flex justify-center flex-wrap gap-4 md:gap-6">
+                <!-- Project Card 1 -->
+                <!-- Project Card 2 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">My Bank</h2>
+                    <p class="mb-4">A simple web-based banking interface built with HTML, CSS, JavaScript, and Bootstrap for styling. It features user registration, login, and basic banking operations like deposits, withdrawals, and transfers between users. The project focuses on frontend logic with dynamic UI updates using JavaScript but does not include backend integration or real financial transactions.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="window.open('https://kaushal-345.github.io/my-bank/', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/my-bank/blob/main/index.js', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>My Store</h2>
-                    <p>E-commerce website that features: functional "Add to Cart" system using JavaScript; Users can add, remove, and update items in their cart, view the total order value, and place orders. The project also includes user authentication, order tracking, and dynamic UI updates, making it a step beyond simple frontend design.</p>
-                        <button onclick="window.open('https://kaushal-345.github.io/my-store/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/my-store/blob/main/index.js', '_blank');">Github code</button>
+                <!-- Project Card 3 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">My Store</h2>
+                    <p class="mb-4">Unlike basic online store with only static product listings, My Store features a fully functional "Add to Cart" system using JavaScript. Users can add, remove, and update items in their cart, view the total order value, and place orders. The project also includes user authentication, order tracking, and dynamic UI updates, making it a step beyond simple frontend design.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="window.open('https://kaushal-345.github.io/my-store/', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/my-store/blob/main/index.js', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>Social Media</h2>
-                    <p>Interactive dashboard that utilizes the JSONPlaceholder API to fetch and display user data. Initially, users select from 10 available users and sign in. Once logged in, they can navigate between different sections—Posts, Albums, Profile, and To-Do List—all dynamically retrieved from the API.<br><br></p>
-                        <button onclick="window.open('https://kaushal-345.github.io/socialmedia/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/socialmedia/blob/main/script.js', '_blank');">Github code</button>
+                <!-- Project Card 4 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">Social Media</h2>
+                    <p class="mb-4">My Social Media is an interactive dashboard that utilizes the JSONPlaceholder API to fetch and display user data. Initially, users select from 10 available users and sign in. Once logged in, they can navigate between different sections—Posts, Albums, Profile, and To-Do List—all dynamically retrieved from the API.<br><br></p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="window.open('https://kaushal-345.github.io/socialmedia/', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="window.open('https://github.com/kaushal-345/socialmedia/blob/main/script.js', '_blank');" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>React Store</h2>
-                    <p>React's take on the E-commerce project.<br><br><br><br><br></p>
-                        <button onclick="window.open('https://kaushal-345.github.io/react-store-a/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/react-store-a/tree/master/src', '_blank');">Github code</button>
+                <!-- Project Card 5 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">React Store</h2>
+                    <p class="mb-4">React's take on the E-commerce project.<br><br><br><br></p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>React Temp</h2>
-                    <p>This is where I practice my React.js concepts. Each "App.jsx" has a different concept and its application.<br><br><br><br></p>
-                        <button onclick="window.open('https://kaushal-345.github.io/react-temp-a-dist/', '_blank');">View Project</button>
-                        <button onclick="window.open('https://github.com/kaushal-345/react-temp-a-dist', '_blank');">Github code</button>
+                <!-- Project Card 6 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">React Temp</h2>
+                    <p class="mb-4">This is where I practice my React.js concepts. Each "App.jsx" has a different concept and its application.<br><br><br>  </p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>Project7</h2>
-                    <p>Hello World React.<br><br><br><br><br><br></p>
-                        <button onclick="window.open(' https://kaushal-345.github.io/my-react-app-dist/', '_blank');">View Project</button>
-                        <!-- <button onclick="window.open('https://github.com/kaushal-345/react-temp-a-dist', '_blank');">Github code</button> -->
+                <!-- Project Card 7 -->
+                <div class="bg-silver p-4 rounded-lg w-full sm:w-[45%] md:w-[30%] text-center transition-transform duration-300 hover:translate-y-[-5px] mb-4">
+                    <h2 class="text-2xl font-semibold mb-7">Bird Species Recognition using ML</h2>
+                    <p class="mb-4">Detecting Bird species from an audio input of the bird's sound; converting the audio input into WAV format for better quality and using Random Forest Classifier Model (Ensemble Learning Technique) trained on a Kaggle Dataset for species prediction.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">View Project</button>
+                        <button onclick="location.href='#home'" class="p-2 rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer hover:bg-gray-800">Github code</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h2>Bird Species Recognition using ML</h2>
-                    <p>Detecting Bird species from an audio input of the bird's sound; converting the audio input into WAV format for better quality and using Random Forest Classifier Model (Ensemble Learning Technique) trained on a Kaggle Dataset for species prediction.<br><br></p>
-                        <button onclick="window.open('https://drive.google.com/file/d/1esrYJg1aVQUxA62be1kmwsmuk69EMUxO/view?usp=sharing', '_blank');">View Sample Execution</button>
-                        <!-- <button onclick="location.href='#home'">Github code</button> -->
-                </div>
+                
             </div>
         </div> 
 
-        <div class="row3" id="resume">
-            <h1><i>Wanna know more about me!?</i></h1><br><br>
-            <div class="custom-hr"></div>
-            <h2>Click here to view my Resume</h2>
-        <button onclick="window.open('https://drive.google.com/file/d/1VwT3_AGs6dLvkp7rog8QqYV6Zw9KoHKL/view?usp=sharing', '_blank');"><p style="font-family:Courier New, Courier, monospace; font-size: x-large;">My Resume</p></button>
+        <!-- Resume Section -->
+        <div class="flex flex-col items-center bg-silver p-8 md:p-12 min-h-[40vh]" id="resume">
+            <h1 class="font-mono text-xl md:text-2xl lg:text-3xl italic">Wanna know more about me!?</h1>
+            <div class="my-6"></div>
+            <div class="h-0.5 w-10/12 bg-black"></div>
+            <h2 class="font-mono p-2.5 text-lg md:text-xl">Click here to view my Resume</h2>
+            <button onclick="window.open('https://drive.google.com/file/d/1ipNFtPGACBQH_WVOuaFzDnXaFajfnoTD/view?usp=sharing', '_blank');" class="rounded-lg bg-black text-gray-100 border border-gray-100 cursor-pointer w-full sm:w-3/4 md:w-1/2 p-2 transition-transform duration-300 hover:bg-gray-800 hover:translate-y-[-5px]">
+                <p class="font-mono text-lg md:text-xl">My Resume</p>
+            </button>
         </div>
 
-        <div class="footer" id="socials">
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/kaushal-345-/" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF" alt="LinkedIn"> LinkedIn
+        <!-- Footer/Socials Section -->
+        <div class="bg-black p-5 text-center" id="socials">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 md:gap-24">
+                <a href="https://www.linkedin.com/in/kaushal-345-/" target="_blank" class="flex items-center no-underline text-gray-100 font-mono text-base md:text-lg cursor-pointer p-2.5 hover:bg-gray-800 hover:rounded-lg w-full sm:w-auto">
+                    <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF" alt="LinkedIn" class="h-5 md:h-6 mr-2"> LinkedIn
                 </a>
-                <a href="https://github.com/kaushal-345" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" alt="GitHub"> GitHub
+                <a href="https://github.com/kaushal-345" target="_blank" class="flex items-center no-underline text-gray-100 font-mono text-base md:text-lg cursor-pointer p-2.5 hover:bg-gray-800 hover:rounded-lg w-full sm:w-auto">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" alt="GitHub" class="h-5 md:h-6 mr-2"> GitHub
                 </a>
-                <a href="mailto:kaushal.kulkarni345@gmail.com">
-                    <img src="https://img.icons8.com/?size=100&id=38159&format=png&color=FFFFFF" alt="Mail"> Email
+                <a href="mailto:kaushal.kulkarni345@gmail.com" class="flex items-center no-underline text-gray-100 font-mono text-base md:text-lg cursor-pointer p-2.5 hover:bg-gray-800 hover:rounded-lg w-full sm:w-auto">
+                    <img src="https://img.icons8.com/?size=100&id=38159&format=png&color=FFFFFF" alt="Mail" class="h-5 md:h-6 mr-2"> Email
                 </a>
-                <!-- <a href="https://www.instagram.com/yourprofile" target="_blank">
-                    <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=FFFFFF" alt="Instagram"> Instagram
+                <!-- <a href="https://www.instagram.com/yourprofile" target="_blank" class="flex items-center no-underline text-gray-100 font-mono text-base md:text-lg cursor-pointer p-2.5 hover:bg-gray-800 hover:rounded-lg w-full sm:w-auto">
+                    <img src="https://img.icons8.com/?size=100&id=85140&format=png&color=FFFFFF" alt="Instagram" class="h-5 md:h-6 mr-2"> Instagram
                 </a> -->
             </div>
         </div>
